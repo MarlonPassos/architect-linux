@@ -1,0 +1,78 @@
+
+============================================================
+1.Programas importantes (Abra um terminal e execute)
+============================================================
+
+Compressores:
+-------------
+sudo pacman -S tar gzip bzip2 unzip unrar p7zip fileroller
+
+Browser:
+--------
+sudo pacman -S firefox flashplugin 
+
+Downloader's:
+------------- 
+sudo pacman -S wget curl transmission
+
+Compatibilidade de discos:
+--------------------------
+sudo pacman -S ntfs-3g
+
+Editor PDF:
+-----------
+sudo pacman -S epdfview
+
+Suíte de escritório
+--------------------
+sudo pacman -S libreoffice libreoffice-pt-BR
+
+============================================================
+2. Instale Yaourt e orepositório extra AUR  
+============================================================
+
+Edite o arquivo pacman.conf 
+----------------------------
+sudo nano /etc/pacman.conf
+	
+Adicione no final do arquivo:
+-----------------------------
+
+[archlinuxfr]
+SigLevel = Never
+Server = http://repo.archlinux.fr/$arch
+
+Execute:
+--------
+sudo pacman -Sy yaourt
+
+============================================================
+3. Gerenciador grafico de pacotes (Gui para Pacman):
+============================================================
+
+yaourt -S pamac-aur
+
+ou:
+
+yaourt -S octopi 
+
+
+============================================================
+4.Instalar o suporte de impressora / scanner no Arch Linux
+============================================================
+
+sudo pacman -S libcups cups ghostscript gsfonts system-config-printer simple-scan
+
+Abilitando os serviços
+------------ ---------
+
+sudo systemctl enable org.cups.cupsd.service
+sudo systemctl enable cups-browsed.service
+sudo systemctl start org.cups.cupsd.service
+sudo systemctl start cups-browsed.service
+
+Software par HP DeskJet, OfficeJet, inkjet, and Photosmart Printers
+-------------------------------------------------------------------
+
+sudo pacman -S hplip
+
