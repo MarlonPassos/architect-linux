@@ -192,3 +192,4 @@ Ao efetuar o boot você será levado para está tela.
 
 #####[Configurações básicas pós instalação](https://github.com/MarlonPassos/architect-linux/blob/master/ArchLinuxNotes.txt).
 
+
